@@ -1,0 +1,282 @@
+body {
+    background: #EBECF4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.main {
+    height: auto;
+    width: 80vw;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px 60px 60px 60px;
+    box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+}
+
+.hello {
+    display: flex;
+    flex-direction: column;
+}
+
+.hello__paragraph:first-child {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+}
+
+.hello__paragraph {
+    margin-top: 10px;
+    font-size: 19px;
+    color: #C7CDD4;
+}
+
+.hello__highlight {
+    color: #3D2CB4;
+}
+
+/*
+-----------------------
+Taski
+-----------------------
+*/
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tasks__box {
+    position: relative;
+    margin-top: 25px;
+    flex: 0 45%;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    padding: 10px 25px;
+    box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+}
+
+.tasks__block--grey {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: rgb(97, 96, 96);
+    background: #ebebeb;
+    border-radius: 8px;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    display: none;
+}
+
+.task__block__layer {
+    display: block;
+}
+
+.tasks__block__item {
+    position: relative;
+    font-size: 50px;
+}
+
+.tasks__block--center {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    vertical-align: center;
+    text-align: center;
+}
+
+/*
+
+.tasks__box--ghost::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+*/
+
+.tasks__box:not(:nth-child(-n+2)) {
+    margin-top: 40px;
+}
+
+.tasks__paragraph {
+    margin-top: 15px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    color: #9696B0;
+}
+
+.tasks__dot {
+    height: 12px;
+    width: 12px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.tasks__dot--red {
+    background: red;
+}
+
+.tasks__dot--green {
+    background: green;
+}
+
+.tasks__dot--yellow {
+    background: yellow;
+}
+
+.tasks__dot--purple {
+    background: #7b1fa2;
+}
+
+.tasks__box:hover {
+    cursor: pointer;
+}
+
+.tasksManagment {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    height: auto;
+}
+
+.tasksManagment__box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    border: none;
+    color: white;
+    border-radius: 999em;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.button--primary {
+    background-color: #3D2CB4;
+}
+
+button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+/*
+-----------------------
+Taski
+-----------------------
+*/
+
+/*
+-----------------------
+Input
+-----------------------
+*/
+
+.form__control {
+    width: auto;
+}
+
+.form__control__input[type='text'] {
+    border: none;
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+.form__controlCheckbox--hidden {
+    display: none;
+}
+
+/*
+-----------------------
+Input
+-----------------------
+*/
+
+/*
+-----------------------
+RWD
+-----------------------
+*/
+
+@media all and (min-width:1200px) {}
+
+@media all and (min-width: 960px) {}
+
+@media all and (min-width: 768px) {
+    .main {
+        width: 80vh;
+    }
+    .tasks {
+        flex-direction: row;
+    }
+}
+
+@media all and (min-width: 480px) {}
+
+@media all and (max-width: 599px) {}
+
+@media all and (max-width: 479px) {}
+
+/*
+-----------------------
+RWD
+-----------------------
+*/
+
+/*
+-----------------------
+Helpers
+-----------------------
+*/
+
+.bg-blue {
+    background-color: blue;
+}
+
+.mb-10
+{
+    margin-bottom: 10px;
+}
+
+/*
+-----------------------
+Helpers
+-----------------------
+*/
