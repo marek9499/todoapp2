@@ -1,4 +1,4 @@
-# Rzeczoznawca majątkowy
+# Lista zadań
 
 [Live demo : https://github.com/marek9499/todoapp2](https://github.com/marek9499/todoapp2)
 
