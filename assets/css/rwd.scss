@@ -1,0 +1,54 @@
+@media only screen and (min-width: 480px) {
+    .hello
+    {
+        &__paragraph
+        {
+            font-size: 19px;
+            &:first-child
+            {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .tasks
+    {
+        &__paragraph
+        {
+            font-size: 17px
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .main
+    {
+        width: 70%;
+        margin-top: 40px;
+    }
+    .tasks
+    {
+        flex-direction: row;
+    }
+
+    .hello
+    {
+        &__paragraph
+        {
+            font-size: 20px;
+            &:first-child
+            {
+                font-size: 34px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .main
+    {
+        width: 60%;
+    }
+}

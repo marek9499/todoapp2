@@ -1,0 +1,211 @@
+body {
+    background: #ebecf4;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+.main {
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+}
+
+.hello {
+    display: flex;
+    flex-direction: column;
+    &__paragraph:first-child {
+        font-size: 25px;
+        font-weight: bold;
+        color: black;
+    }
+
+    &__paragraph {
+        margin-top: 10px;
+        font-size: 15px;
+        color: #c7cdd4;
+        text-align: justify;
+    }
+
+    &__highlight {
+        color: #3d2cb4;
+    }
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__paragraph {
+        margin-top: 15px;
+        padding-bottom: 12px;
+        font-size: 14px;
+        text-align: justify;
+        color: #9696b0;
+    }
+
+    &__box {
+        position: relative;
+        margin-top: 25px;
+        flex: 0 45%;
+        border-radius: 8px;
+        width: auto;
+        height: auto;
+        padding: 10px 25px;
+        box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+        -webkit-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+        -moz-box-shadow: -1px 7px 19px 0px rgba(0, 0, 0, 0.32);
+        &:not(:nth-child(-n + 2)) {
+            margin-top: 40px;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__block {
+        &--grey {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #ebebeb;
+            border-radius: 8px;
+            opacity: 0.7;
+            display: none;
+        }
+
+        &__layer {
+            display: block;
+        }
+
+        &__item {
+            //top: 50%;
+            text-align: center;
+            position: relative;
+            font-size: 50px;
+        }
+    }
+
+    &__dot {
+        height: 12px;
+        width: 12px;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        &--red {
+            background: red;
+        }
+        &--green {
+            background: green;
+        }
+        &--yellow {
+            background: yellow;
+        }
+        &--purple {
+            background: #7b1fa2;
+        }
+    }
+}
+
+svg[class*="fa-check-circle"]
+{
+    //position: absolute;
+    //top: 0;
+}
+
+.tasksManagment {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: auto;
+    height: auto;
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.button {
+    border: none;
+    color: white;
+    border-radius: 999em;
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    line-height: 1;
+    font-size: 36px;
+    cursor: pointer;
+
+    &--primary {
+        background-color: #3d2cb4;
+    }
+
+    &[disabled] {
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;
+    }
+}
+
+/*
+-----------------------
+Taski
+-----------------------
+*/
+
+/*
+-----------------------
+Input
+-----------------------
+*/
+
+.form__control {
+    width: auto;
+
+    &__input[type="text"] {
+        border: none;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        //border-bottom: 1px solid black;
+    }
+
+    &Checkbox--hidden {
+        display: none;
+    }
+}
+
+/*
+-----------------------
+Input
+-----------------------
+*/
+
+.bg-blue {
+    background-color: blue;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+@import "rwd.scss";

@@ -43,6 +43,12 @@ const Todo = {
         this.removeSelectedTasksButton.addEventListener("click", this.removeSelectedTasksButton_onClick.bind(this));
         this.articles.addEventListener("keyup", this.newTask_onEnter.bind(this));
         this.articles.addEventListener("click", this.task_onClick.bind(this));
+        //this.articles.addEventListener("dblclick", this.task_onDoubleClick.bind(this));
+    },
+
+    task_onDoubleClick: function(event)
+    {
+        //todo: when user calls double click - user can edit current task...
     },
 
     /*
@@ -119,13 +125,13 @@ const Todo = {
                 let completedTask = { className: "" };
                 if (isCompleted) {
                     completedTask = {
-                        className: "task__block__layer",
+                        className: "tasks__block__layer",
                     }
                 }
 
                 const taskTemplate = `
                 <div class="tasks__block tasks__block--grey ${completedTask.className}">
-                    <div class="tasks__block__item tasks__block--center">
+                    <div class="tasks__block__item">
                 
                         <i class="far fa-check-circle"></i>
                     </div>
@@ -215,7 +221,7 @@ const Todo = {
 
         const taskTemplate = `
                 <div class="tasks__block tasks__block--grey">
-                    <div class="tasks__block__item tasks__block--center">
+                    <div class="tasks__block__item">
                         <input class="form__control__input form__controlCheckbox--hidden" type="checkbox">
                         <i class="far fa-check-circle"></i>
                     </div>
@@ -252,35 +258,37 @@ const Todo = {
         let taskId;
         let taskContainer;
 
+        console.log(tagName)
         if (tagName == "P") {
             taskContainer = e.target.parentElement.parentElement;
             taskId = taskContainer.dataset.todoId;
-            taskContainer.children[0].classList.add("task__block__layer");
+            taskContainer.children[0].classList.add("tasks__block__layer");
+            console.log(taskContainer.children[0]);
             this.setFinishedTask(taskId);
         }
         else if (tagName == "ARTICLE") {
             taskContainer = e.target;
             taskId = taskContainer.dataset.todoId;
-            taskContainer.children[0].classList.add("task__block__layer");
+            taskContainer.children[0].classList.add("tasks__block__layer");
             this.setFinishedTask(taskId);
         }
         else if (tagName == "DIV") {
             taskContainer = e.target;
             taskId = taskContainer.parentElement.parentElement.dataset.todoId;
-            taskContainer.parentElement.classList.remove("task__block__layer")
+            taskContainer.parentElement.classList.remove("tasks__block__layer")
             this.setUnfinishedTask(taskId);
         }
         else if (tagName == "svg") {
             taskContainer = e.target;
             taskId = taskContainer.parentElement.parentElement.parentElement.dataset.todoId;
-            taskContainer.parentElement.parentElement.classList.remove("task__block__layer");
+            taskContainer.parentElement.parentElement.classList.remove("tasks__block__layer");
             this.setUnfinishedTask(taskId);
         }
         else if (tagName == "path") {
             taskContainer = e.target;
             taskId = taskContainer.parentElement.parentElement.parentElement.parentElement.dataset.todoId;
             this.setUnfinishedTask(taskId);
-            taskContainer.parentElement.parentElement.parentElement.classList.remove("task__block__layer");
+            taskContainer.parentElement.parentElement.parentElement.classList.remove("tasks__block__layer");
         }
         else {
             console.log(e.target.tagName);

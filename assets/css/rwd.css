@@ -1,0 +1,40 @@
+@media only screen and (min-width: 480px) {
+  .hello__paragraph {
+    font-size: 19px;
+  }
+  .hello__paragraph:first-child {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tasks__paragraph {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .main {
+    width: 70%;
+    margin-top: 40px;
+  }
+  .tasks {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .hello__paragraph {
+    font-size: 20px;
+  }
+  .hello__paragraph:first-child {
+    font-size: 34px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main {
+    width: 60%;
+  }
+}
+/*# sourceMappingURL=rwd.css.map */
