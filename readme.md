@@ -1,6 +1,6 @@
 # Lista zadań
 
-[Live demo : https://github.com/marek9499/todoapp2](https://github.com/marek9499/todoapp2)
+[Live demo](https://marek9499.github.io/todoapp2/)
 
 ![responsive](https://github.com/marek9499/portfolio/blob/master/img/mockups/todoapp/Mockup.jpg)
 
